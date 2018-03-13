@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - ./site:/home/circleci/site
+      - /home/circleci/site/node_modules
+    ports:
+      - "8000:8000"
